@@ -1,0 +1,26 @@
+# Image information (names, path, etc)
+train_path: Data/Training
+test_path: Data/Training
+classes: ['Healthy', 'Infested', 'Dead']
+
+# Continual learning parameters
+models:
+- ['ViT', models.vit_b_16]
+- ['SWIN', models.swin_t]
+- ['ResNet', models.resnet50]
+- ['ConvNeXt', models.convnext_tiny]
+
+# Training data information
+lr: 0.0001
+training: BalancedDataset
+validation: NaturalDataset
+train_batch: 10
+test_batch: 100
+
+# Network hyperparameters and configuration
+seeds: [42, 80702, 74794, 62021, 48497]
+val_split: 0.10
+epochs: 50
+patience: 50
+model_path: Models
+json_path: JSON

@@ -94,3 +94,5 @@ ENV/
 # Extra folders
 Data/
 deepLearningClassifier/
+Models/
+JSON/
